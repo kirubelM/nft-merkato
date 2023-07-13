@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "next/image";
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 const NFTDropPage = () => {
   //Auth
@@ -12,7 +13,7 @@ const NFTDropPage = () => {
       <div className=" bg-gradient-to-br from-cyan-800 to-blue-500 lg:col-span-4">
         <div className=" flex flex-col items-center justify-center py-2 lg:min-h-screen">
           <div className="bg-gradient-to-br from-yellow-400 to-purple-600 p-2 rounded-xl">
-            <img
+            <Image
               className="w-44 rounded-xl object-cover lg:h-96 lg:w-72"
               src="https://links.papareact.com/8sg"
               alt=""
@@ -47,13 +48,13 @@ const NFTDropPage = () => {
         <hr className="my-2 border" />
         {address && (
           <p className="text-center text-sm text-rose-400">
-            You're logged in with wallet {address?.substring(0, 5)}...
+            You&aposre logged in with wallet {address?.substring(0, 5)}...
             {address?.substring(address.length - 4)}
           </p>
         )}
         {/* {content} */}
         <div className="mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:justify-center lg:space-y-0">
-          <img
+          <Image
             className="w-80 object-cover pb-10 lg:h-40"
             src="https://links.papareact.com/bdy"
             alt=""
@@ -61,7 +62,7 @@ const NFTDropPage = () => {
           <h1 className="text-3xl font-bold lg:text-5xl lg:font-extrabold">
             The PAPAFAM Ape Coding CLub | NFT Drop
           </h1>
-          <p className="pt-2 text-xl text-green-500">12/21 NFT's claimed</p>
+          <p className="pt-2 text-xl text-green-500">12/21 NFTs claimed</p>
         </div>
         {/* {mint button} */}
         <button className="mt-10 h-16 w-full bg-blue-600 w-4 rounded-full font-bold text-white">
